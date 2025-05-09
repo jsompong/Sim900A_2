@@ -1,0 +1,14 @@
+E:\sim900A\Sim900A_2\bin\Debug\Sim900A_2.exe.config
+E:\sim900A\Sim900A_2\bin\Debug\Sim900A_2.exe
+E:\sim900A\Sim900A_2\bin\Debug\Sim900A_2.pdb
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.csproj.AssemblyReference.cache
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.Properties.Resources.resources
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.csproj.GenerateResource.cache
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.csproj.CoreCompileInputs.cache
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.exe
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.pdb
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.Form1.resources
+E:\sim900A\Sim900A_2\bin\Debug\Sim900A_2.exe.manifest
+E:\sim900A\Sim900A_2\bin\Debug\Sim900A_2.application
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.exe.manifest
+E:\sim900A\Sim900A_2\obj\Debug\Sim900A_2.application
