@@ -32,6 +32,7 @@
             this.SerialPort = new System.IO.Ports.SerialPort(this.components);
             this.SentBox = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.Rxtimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // SerialPort
@@ -46,7 +47,7 @@
             this.SentBox.Multiline = true;
             this.SentBox.Name = "SentBox";
             this.SentBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.SentBox.Size = new System.Drawing.Size(347, 184);
+            this.SentBox.Size = new System.Drawing.Size(347, 229);
             this.SentBox.TabIndex = 0;
             this.SentBox.TextChanged += new System.EventHandler(this.SentBox_TextChanged);
             // 
@@ -55,6 +56,11 @@
             this.timer.Interval = 2000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // Rxtimer
+            // 
+            this.Rxtimer.Interval = 500;
+            this.Rxtimer.Tick += new System.EventHandler(this.Rxtimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -62,7 +68,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SentBox);
             this.Name = "Form1";
-            this.Text = "SIm900A Simu. COM6 Tx";
+            this.Text = "SIm900A Simu. COM8 Tx";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -74,6 +80,7 @@
         private System.IO.Ports.SerialPort SerialPort;
         private System.Windows.Forms.TextBox SentBox;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Timer Rxtimer;
     }
 }
 

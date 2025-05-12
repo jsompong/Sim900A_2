@@ -17,7 +17,7 @@ namespace Sim900A_2
     {
         
         //SerialPort mySerialPort = new SerialPort( );
-        SerialPort mySerialPort = new SerialPort("COM6",9600);
+        SerialPort mySerialPort = new SerialPort("COM8",9600);
         //mySerialPort.BaudRate(9600);
         public Form1()
         {
@@ -33,14 +33,17 @@ namespace Sim900A_2
         {
            string message = ((char)13).ToString();
             byte[] command = new byte[] { 0x13, 0x10 };
+           // mySerialPort.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
             try
             {
                 mySerialPort.Open();
+            //    Console.ReadLine();
                 mySerialPort.Write("RING\r\n");
                 // mySerialPort.WriteLine(message);
               // mySerialPort.Write(new byte[] { 13 }, 0, 1);
                // mySerialPort.Write(command);
-                timer.Enabled=true;             
+                timer.Enabled=true;
+                Rxtimer.Enabled = true;
             }
             catch (IOException ex)
             {
@@ -58,6 +61,23 @@ namespace Sim900A_2
         private void timer_Tick(object sender, EventArgs e)
         {
              mySerialPort.Write("RING\r\n");
+        }
+
+        private void Rxtimer_Tick(object sender, EventArgs e)
+        {
+            // int number = mySerialPort.Read();
+            //string numberString = Convert.ToString(number);
+            // Console.WriteLine(numberString); // Output: "123"
+            
+            string message = mySerialPort.ReadLine();
+            SentBox.Text = message;
+        }
+
+        private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            // Show all the incoming data in the port's buffer
+            Console.WriteLine(mySerialPort.ReadExisting());
+            //SentBox.Text = mySerialPort.ReadExisting();
         }
     }
 }
