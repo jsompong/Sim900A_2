@@ -68,7 +68,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SentBox);
             this.Name = "Form1";
-            this.Text = "SIm900A Simu. COM8 Tx";
+            this.Text = "vs2019_SIm900A Simu. COM8 Tx";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
